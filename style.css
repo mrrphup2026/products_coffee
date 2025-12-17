@@ -1,0 +1,156 @@
+*{
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+    }
+  body {
+    background-color: #666;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: #4b2e2e;
+    color: white;
+    padding: 1rem 2rem;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  nav .logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+  }
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  .search-login input[type="text"] {
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: none;
+    width: 200px;
+  }
+  .section {
+    padding: 50px 20px;
+  }
+  h2 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 20px;
+  }
+  .card {
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.15);
+    overflow: hidden;
+    background: white;
+    text-align: center;
+    transition: transform 0.2s;
+  }
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  .card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  .card-body {
+    padding: 1rem;
+  }
+  .card-body h3 {
+    margin: 10px 0;
+  }
+  .card-body p {
+    font-size: 0.9rem;
+    color: #666;
+    min-height: 40px;
+  }
+  .card-body button {
+    margin-top: 10px;
+    padding: 0.5rem 1rem;
+    background-color: #4b2e2e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .card-body button:hover {
+    background-color: #0015ff;
+  }
+  footer {
+    width: 100%;
+    height: 400px;
+    background-color: #333;
+    color: white;
+    padding: 40px 20px;
+   
+  }
+  footer .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    margin-top: 20px;
+    justify-content: space-between;
+    gap: 50px;
+    margin-bottom: 50px;
+    
+  }
+  footer h4 {
+    margin-bottom: 10px;
+  }
+  footer ul {
+    list-style: none;
+    padding: 0;
+  }
+  footer ul li {
+    margin-bottom: 5px;
+  }
+  footer ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  footer ul li a:hover {
+    color: white;
+  }
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative; /* ត្រូវសម្រាប់ pseudo-element */
+    padding-bottom: 5px;
+    transition: color 0.3s;
+}
+
+/* underline hover effect */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white; /* ពណ៌បន្ទាត់ */
+    transition: width 0.3s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+     transition: all 0.3s ease-in-out;
+}
